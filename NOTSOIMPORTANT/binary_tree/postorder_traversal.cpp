@@ -32,25 +32,7 @@ class Solution {
                return root;
            }
         }
-
-/* you only have to complete the function given below.  
-Node is defined as  
-
-class Node {
-    public:
-        int data;
-        Node *left;
-        Node *right;
-        Node(int d) {
-            data = d;
-            left = NULL;
-            right = NULL;
-        }
-};
-
-*/
-
-
+    //Postorder traversal
     void postOrder(Node *root) {
         if(root == NULL) return;
         postOrder(root->left);
