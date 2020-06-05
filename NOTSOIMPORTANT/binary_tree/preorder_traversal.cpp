@@ -31,50 +31,14 @@ class Solution {
 
                return root;
            }
-        }
-
-/* you only have to complete the function given below.  
-Node is defined as  
-
-class Node {
-    public:
-        int data;
-        Node *left;
-        Node *right;
-        Node(int d) {
-            data = d;
-            left = NULL;
-            right = NULL;
-        }
-};
-
-*/
-
+        } 
+    //Preorder traversal
     void preOrder(Node *root) {
-        Node* pre = (Node*)(malloc(sizeof(Node)));
         if(root == NULL) return;
-        Node* curr = root;
-        while(curr != NULL){
-            if(curr->left == NULL){
-                cout << curr->data << " ";
-                curr = curr->right;
-            }
-            else{
-                pre = curr->left;
-                while(pre->right != NULL && pre->right != curr) pre = pre->right;
-                if(pre->right == NULL){
-                    pre->right = curr;
-                    cout << curr->data << " ";
-                    curr = curr->left;
-                }
-                else{
-                    pre->right = NULL;
-                    curr = curr->right;
-                }
-            }
-        }
+	cout << root->data << " ";
+	preOrder(root->left);
+	preOrder(root->right);
     }
-
 }; //End of Solution
 
 int main() {
