@@ -1,0 +1,12 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long int ll;
+#define MAXSIZE 10
+class Array{
+	public:
+		int arr[MAXSIZE];
+		
+}
+
+int main(){
+}
